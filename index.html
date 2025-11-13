@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booksky</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     .overlay{
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+        display: none;
+
+
+
+
+     }
+     .popup{
+        position: absolute;
+        background-color: white;
+        width: 25%;
+        padding: 20px;
+        left: 30%;
+        border-radius: 10px;
+        display: none;
+
+
+     }
+    </style>
+</head>
+
+<body>
+    <button id="show">Show</button>
+    <div class="overlay"></div>
+    <div class="popup">
+        <h2>Book Tittle</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae odio nostrum deserunt magni soluta molestias accusamus excepturi voluptas omnis sapiente, libero atque harum labore expedita recusandae vero dolorem quo placeat!</p>
+        <button id="btn">Close</button>
+    </div>
+    <script>
+        var show=document.getElementById("show")
+        var popup=document.querySelector(".popup")
+        var overlay=document.querySelector(".overlay")
+        var btn=document.getElementById("btn")
+        btn.addEventListener("click",function(){
+            overlay.style.display="none"
+            popup.style.display="none"
+
+        })
+        show.addEventListener("click",function(){
+            overlay.style.display="block"
+            popup.style.display="block"
+
+        })
+
+    </script>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booksky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Booksky</h1>
+    </div>
+    <div class="cont-overlay"></div>
+    <div class="container">
+        <div class="cont-book">
+            <h2>Book Tittle</h2>
+            <h4>Author</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas dignissimos sunt alias rem cupiditate
+                temporibus possimus? Aut reiciendis ipsum accusantium laboriosam, quod consequuntur eius nam voluptatum
+                magni voluptatibus officiis eaque!</p>
+            <button id="bookdelete" onclick="del(event)">Delete</button>
+        </div>
+    </div>
+
+
+    <div class="addbookdetails">
+        <h2>Add Book</h2>
+        <input type="text" placeholder="Book Name" id="booknameinput">
+        <input type="text" placeholder="Book Tittle" id="booktittleinput">
+        <textarea placeholder="Short Description" id="bookdescriptioninput"></textarea>
+        <button id="addbook" style="cursor: pointer;">ADD</button>
+        <button id="cancelbook" style="cursor: pointer;">CANCEL</button>
+
+    </div>
+
+
+    <div>
+        <button class="plusbutton" id="pluspopup">+</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
